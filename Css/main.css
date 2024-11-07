@@ -814,65 +814,62 @@
   }
 }
 
-/* Tablet Layout (min-width: 768px) */
-@media (min-width: 768px) {
-  .image-gallery {
-    display: grid;
-    grid-template-columns: 400px 100px 100px; /* First column 400px for large image, next two columns 100px each */
-    grid-template-rows: 400px 100px; /* Two rows, first row 400px height and second row 100px height */
-    gap: 10px; /* Space between images */
+/* Desktop Layout (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .image-gallery {
+      display: grid;
+      grid-template-columns: 500px 150px 150px 150px; /* Larger first column for main image, three smaller columns for other images */
+      grid-template-rows: 500px 150px; /* First row with large height, second row shorter */
+      gap: 15px; /* Increased gap for desktop spacing */
+    }
+  
+    /* First Image (500px x 500px) */
+    .image-gallery > .image-item:nth-child(1) {
+      grid-column: 1 / span 1; /* First column */
+      grid-row: 1 / span 2; /* Spans both rows */
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Second Image (150px x 150px) */
+    .image-gallery > .image-item:nth-child(2) {
+      grid-column: 2; /* Second column */
+      grid-row: 1; /* First row */
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Third Image (150px x 150px) */
+    .image-gallery > .image-item:nth-child(3) {
+      grid-column: 3; /* Third column */
+      grid-row: 1; /* First row */
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Fourth Image (150px x 150px) */
+    .image-gallery > .image-item:nth-child(4) {
+      grid-column: 4; /* Fourth column */
+      grid-row: 1; /* First row */
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Fifth Image (150px x 150px) */
+    .image-gallery > .image-item:nth-child(5) {
+      grid-column: 2 / span 3; /* Spans across the second to fourth columns */
+      grid-row: 2; /* Second row */
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Style for Image */
+    .image-gallery .image-item img {
+      object-fit: cover; /* Ensure images cover their containers */
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; /* Optional: rounded corners */
+      padding: 0%;
+    }
   }
-
-  /* First Image (400px x 400px) */
-  .image-gallery > .image-item:nth-child(1) {
-    grid-column: span 1; /* Placed in the first column */
-    grid-row: span 2; /* Spans both rows */
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Second Image (100px x 100px) */
-  .image-gallery > .image-item:nth-child(2) {
-    grid-column: 2; /* Placed in the second column */
-    grid-row: 1; /* Placed in the first row */
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Third Image (100px x 100px) */
-  .image-gallery > .image-item:nth-child(3) {
-    grid-column: 3; /* Placed in the third column */
-    grid-row: 1; /* Placed in the first row */
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Fourth Image (100px x 100px) */
-  .image-gallery > .image-item:nth-child(4) {
-    grid-column: 2; /* Placed in the second column */
-    grid-row: 2; /* Placed in the second row */
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Fifth Image (100px x 100px) */
-  .image-gallery > .image-item:nth-child(5) {
-    grid-column: 3; /* Placed in the third column */
-    grid-row: 2; /* Placed in the second row */
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Style for Image */
-  .image-gallery .image-item img {
-    object-fit: cover; /* Ensure images cover their containers */
-    width: 100%;
-    height: 100%;
-    border-radius: 8px; /* Optional: rounded corners */
-    padding: 0%;
-  }
-}
-
-
-/* desktop mock up view  */
-
+  
