@@ -1,175 +1,93 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@700&display=swap');
 
-/* Mobile View (max-width: 767px) */
-@media (max-width: 768px) {
+@media (min-width: 357px) and (max-width: 768px) {
+
   /* Header Section */
   .header-container {
-      display: flex;
-      flex-direction: column; /* Stack logo-text and navigation vertically */
-      align-items: center; /* Center align all content horizontally */
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 1); /* Black background */
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 1); /* Black background */
+    margin-bottom: -30%; /* Remove the negative margin */
   }
 
-  /* Logo Container - Align logo and text inline */
+  /* Logo Container */
   .logo-container {
-      display: flex;
-      align-items: center; /* Vertically centers the logo and text */
-      gap: 1rem; /* Space between the logo and the text */
-      margin-bottom: 1rem; /* Adds space between the logo/text and the navigation */
+    display: flex;
+    align-items: center; /* Vertically center logo and text */
+    gap: 1rem;
+    margin-bottom: 40px; /* Space between logo and nav */
   }
 
-  .logo-img {
-      display: block;
-      max-width: 100%; /* Make sure the image is responsive */
-      height: auto;
-      margin-right: -30px;
-  }
-
-  /* Header Title */
-  .header-title {
-      font-size: 1.5rem; /* Adjust size for mobile */
-      font-weight: bold;
-      color: #ffffff; /* White text */
-      font-family: 'Lato', sans-serif;
-  }
-
-  /* Navigation Section */
+  /* Navigation Container */
   .nav-container {
-      display: flex;
-      flex-direction: row; /* Change to row to align links horizontally */
-      align-items: center;
-      gap: 1.5rem; /* Space between navigation links */
+    display: flex;
+    flex-direction: row; /* Horizontally align nav links */
+    align-items: center;
+    gap: 1.5rem;
   }
 
+  /* Navigation Links */
   .nav-link {
-      color: whitesmoke;
-      text-decoration: none;
-      font-family: 'Lato', sans-serif;
-      font-size: 1rem;
-      transition: color 0.3s;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s;
   }
 
-  .nav-link:hover {
-      color: #374151;
-  }
-
-  /* Main Content Section */
+  /* Mobile Layout (max-width: 768px) */
   .main-content {
-      position: relative;
-      text-align: center;
-      height: 100vh; /* Full screen height */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: -20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full screen height */
+    text-align: center; /* Center text */
   }
 
-  .bg-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      filter: brightness(40%);
-  }
-
-  .content-overlay {
-      position: relative;
-      z-index: 1;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      border-radius: 8px;
-      max-width: 90%;
-      margin: 0 auto;
-  }
-
-  .main-heading {
-      font-size: 1.2rem; /* Smaller font size */
-      font-weight: bold;
-      margin-bottom: 1rem;
-      font-family: 'Lato', sans-serif;
-  }
-
-  .main-paragraph {
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-  }
-
-  .explore-button {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      font-size: 1rem;
-      border: 2px solid #ccc;
-      transition: background-color 0.3s;
-      font-family: 'Karla', sans-serif;
-      display: inline-block;
-      margin-top: 1rem;
-  }
-
-  .explore-button:hover {
-      background-color: goldenrod;
-  }
-}
-
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  
-  
-  .main-content {
-    position: relative; 
-    text-align: center;
-    height: 100vh; /* Make sure it takes up the full screen height */
-    display: flex; /* Use flexbox to center the content */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    margin-bottom: -20px;
-  }
-
-  /* Background Image */
   .bg-image {
     width: 100%;
-    height: 100%; /* Set height to 40% of the viewport height */
-    object-fit: cover;
+    height: 90%; /* Reduce height further if needed */
+    object-fit: cover; /* Ensure the image covers the whole screen without stretching */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    filter: brightness(40%);
+    z-index: -1; /* Place behind content */
+    filter: brightness(40%); /* Darken the image */
+    background-position: center; /* Center the background image */
   }
 
   /* Content Overlay */
   .content-overlay {
     position: relative;
-    z-index: 1; /* Makes sure the content is in front of the background */
-    color: white; /* White text color for contrast */
-    padding: 2rem; /* Padding for content spacing */
-    text-align: center; /* Centers the text */
-    border-radius: 8px; /* Optional: rounded corners for a soft look */
-    max-width: 700px; /* Optional: limits content width */
+    z-index: 1;
+    color: white;
+    padding: 2rem;
+    text-align: center; /* Center text inside the overlay */
+    border-radius: 8px;
+    max-width: 700px; /* Limits width on mobile */
     margin: 0 auto; /* Centers the overlay */
+    width: 100%; /* Ensure it takes up full width */
   }
 
   /* Main Heading */
   .main-heading {
-    font-size: 1.5rem; /* Adjust heading size */
+    font-size: 1rem; /* Adjusted size for mobile screens */
     font-weight: bold;
-    margin-bottom: 1rem;
     font-family: 'Lato', sans-serif;
-    margin-left: -5px;
+    margin-bottom: 1rem;
   }
 
   /* Main Paragraph */
   .main-paragraph {
-    font-size: 1rem;
+    font-size: 1rem; /* Standard font size for paragraph */
     margin-bottom: 3rem; /* Adds space below the paragraph */
+    max-width: 100%; /* Make sure paragraph takes full width */
+    margin-left: auto; /* Auto margins to center */
+    margin-right: auto;
+
   }
 
   /* Explore Button */
@@ -182,8 +100,8 @@
     border: 2px solid #ccc;
     transition: background-color 0.3s;
     font-family: 'Karla', sans-serif;
-    display: inline-block; /* Ensures it behaves like a block element while staying inline */
-    margin-top: 1rem; /* Moves the button below the paragraph */
+    display: inline-block;
+    margin-top: 1rem; /* Adds space between button and paragraph */
   }
 
   .explore-button:hover {
@@ -191,79 +109,83 @@
   }
 }
 
-/* Responsive mobile view */
-@media (max-width: 768px) {
-    .section-title {
-        transform: translateY(5px); /* Moves the title down slightly on smaller screens */
-        margin-top: 5rem; /* Reduces the top margin for mobile view */
-    }
+/* General Container */
+.container {
+  padding: 10px;
+  max-width: 150%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  
+}
+
+/* Main Heading (h1) */
+h1.section-title {
+  font-size: 1rem; 
+  color: #d79e3d; /* Gold color */
+  margin-bottom: 10px; /* Space below the title */
+  margin-left: -25%;
+  font-weight: lighter;
+  font-size: normal;
+
+}
+
+.section-subtitle{
+  font-size: 1.5rem; /* 28.83px */
+  color: black; /* Black color */
+  font-weight: lighter; /* Lighter font weight */
+  margin-bottom: 20px; /* Space below the subtitle */
+  margin-left: -4%;
+  font-weight: bold;
+  color: black;
 }
 
 
+/* First Container: Full-width Image */
+.full-width-image-container {
+  width: 380px;
+  height: 400px; /* Height of the first image container */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
 
-  .section-subtitle {
+.full-width-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fully covers the container */
+  border-radius: 15px; /* Adds rounded corners to the full-width image */
+}
 
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #333;
-    font-size: bold;
-    margin-bottom: 0.5rem;
-    margin-bottom: 40px;
-  }
-  
-  .image-container {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  /* Image Gallery Styling */
-  .image-gallery {
-    display: grid;
-    grid-template-columns: 1fr; /* One image per row by default */
-    gap: 1.5rem; /* Space between rows and columns */
-  }
-  
-  .image-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  }
-  
-  /* Mobile Layout */
-  @media (max-width: 768px) {
-    .image-gallery {
-      grid-template-columns: 1fr; /* First image is full width */
-      gap: 2rem; /* Space between images */
-    }
-  
-    /* Second and third rows: display two images side by side */
-    .image-gallery > .image-item:nth-child(2),
-    .image-gallery > .image-item:nth-child(3) {
-      grid-column: span 1; /* First row is single image, second and third rows will have 2 images */
-    }
-  
-    /* Adjust the grid for rows 2 and 3 (2 images in each row) */
-    .image-gallery > .image-item:nth-child(2),
-    .image-gallery > .image-item:nth-child(3),
-    .image-gallery > .image-item:nth-child(4),
-    .image-gallery > .image-item:nth-child(5) {
-      grid-column: span 1;
-    }
-  
-    /* Display two images per row (for rows 2 and 3) */
-    .image-gallery {
-      grid-template-columns: repeat(2, 1fr); /* Display 2 images side by side */
-      gap: 1.5rem; /* Space between images */
-    }
-  }
-  
+/* Second Container: 4 Image Boxes */
+.image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 5px; /* 5px gap between images */
+  margin-top: 20px; /* Optional: Adds some space between the first and second container */
+  justify-items: center; /* Center the images within each grid item */
+}
+
+/* Image Box */
+.image-box {
+  width: 200px;  /* Size of the image boxes */
+  height: 200px; /* Size of the image boxes */
+  overflow: hidden; /* Ensures images don't overflow out of the box */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.image-box img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the container without distortion */
+  border-radius: 15px; /* Adds rounded corners to all images in the image box */
+}
+
   
   
  /* Media Query for Mobile Layout */
@@ -271,26 +193,30 @@
   
   /* General Background for the Section */
   .visit-us-section {
-    background-color: #f4f0e9; /* Background color #f4f0e9 */
+    
     padding: 1.5rem; /* Padding of 1.5rem */
+    margin-left: -25%;
   }
   
   /* Section Title (WHAT WE OFFER) */
   .offer-title {
-    font-size: 2rem; /* Equivalent to 2rem in Tailwind */
-    font-weight: 700; /* Bold font weight */
-    color: #333; /* Primary text color */
+    font-size: 0.8rem; /* Equivalent to 2rem in Tailwind */
+  
+    color: #cc953a; /* Primary text color */
     margin-bottom: 1rem; /* Bottom margin of 1rem */
-    text-align: center; /* Centered title */
+    margin-left: 45%;
+    font-weight: lighter;
   }
   
   /* Why Visit Us Subtitle */
   .visit-us-subtitle {
     font-size: 1.5rem; /* Subtitle size */
-    font-weight: 600; /* Semi-bold font weight */
-    color: #333; /* Primary text color */
+    font-weight: 800; /* Semi-bold font weight */
+    color: black; /* Primary text color */
     margin-bottom: 3rem; /* Larger bottom margin */
     text-align: center; /* Centered subtitle */
+    margin-right: -20%;
+    font-weight: bolder;
   }
   
   /* Grid Layout */
@@ -298,12 +224,14 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr); /* 1 column for mobile view */
     gap: 1.5rem; /* Gap between grid items */
+    margin-left: 10%;
   }
   
   /* Card Styling */
   .feature-card {
     text-align: center; /* Center content inside card */
     transition: transform 0.3s ease-in-out;
+    margin-left: 10%;
   }
   
   .feature-card:hover {
@@ -372,6 +300,7 @@
     justify-content: center;
     color: white;
     text-align: center;
+    width: 120%;
   }
 
   /* Menu Background Styling */
@@ -453,7 +382,6 @@
   .about-section {
     padding-top: 50px; /* Creates 50px padding at the top */
     margin-top: 70px; /* Optional: Double check that there's no conflicting margin */
-    background-color: #f4f0e9;
   }
 
   .about-image img {
@@ -814,62 +742,3 @@
   }
 }
 
-/* Desktop Layout (min-width: 1024px) */
-@media (min-width: 1024px) {
-    .image-gallery {
-      display: grid;
-      grid-template-columns: 500px 150px 150px 150px; /* Larger first column for main image, three smaller columns for other images */
-      grid-template-rows: 500px 150px; /* First row with large height, second row shorter */
-      gap: 15px; /* Increased gap for desktop spacing */
-    }
-  
-    /* First Image (500px x 500px) */
-    .image-gallery > .image-item:nth-child(1) {
-      grid-column: 1 / span 1; /* First column */
-      grid-row: 1 / span 2; /* Spans both rows */
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Second Image (150px x 150px) */
-    .image-gallery > .image-item:nth-child(2) {
-      grid-column: 2; /* Second column */
-      grid-row: 1; /* First row */
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Third Image (150px x 150px) */
-    .image-gallery > .image-item:nth-child(3) {
-      grid-column: 3; /* Third column */
-      grid-row: 1; /* First row */
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Fourth Image (150px x 150px) */
-    .image-gallery > .image-item:nth-child(4) {
-      grid-column: 4; /* Fourth column */
-      grid-row: 1; /* First row */
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Fifth Image (150px x 150px) */
-    .image-gallery > .image-item:nth-child(5) {
-      grid-column: 2 / span 3; /* Spans across the second to fourth columns */
-      grid-row: 2; /* Second row */
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Style for Image */
-    .image-gallery .image-item img {
-      object-fit: cover; /* Ensure images cover their containers */
-      width: 100%;
-      height: 100%;
-      border-radius: 8px; /* Optional: rounded corners */
-      padding: 0%;
-    }
-  }
-  
