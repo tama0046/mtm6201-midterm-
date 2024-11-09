@@ -10,7 +10,10 @@
     align-items: center; /* Center content horizontally */
     padding: 1rem;
     background-color: rgba(0, 0, 0, 1); /* Black background */
-    margin-bottom: -30%; /* Remove the negative margin */
+    margin-top: -5%;
+    width: 103%;
+    margin-left: -10%;
+
   }
 
   /* Logo Container */
