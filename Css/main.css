@@ -424,6 +424,7 @@ h1.section-title {
   margin: 0 auto; /* Centers the content */
   text-align: left; /* Align text to the left */
   margin-top: 20px; /* Space between image and content */
+ 
 }
 
 /* About Title Styling */
@@ -452,7 +453,7 @@ h1.section-title {
   font-size: 1rem; /* Standard font size for paragraph */
   color: #555; /* Dark grey color for text */
   line-height: 1.6; /* Improved readability */
-  margin-bottom: 1.5rem; /* Space between paragraphs */
+  margin-bottom: 2rem; /* Space between paragraphs */
   margin-left: -18px;
   margin-top: -20px;
 }
@@ -486,7 +487,7 @@ h1.section-title {
   height: 790px; /* Reduced height */
   overflow: hidden; /* Ensures the image fits */
   margin-left: 0; /* Remove left margin */
-  margin-bottom: 2rem; /* Space between image and content */
+  margin-bottom: 9rem; /* Space between image and content */
   margin-left: -20px;
   margin-top: -25%;
 }
@@ -661,132 +662,271 @@ h1.section-title {
   border-top: 2px solid white; /* White color for the line */
 }
 
+/* *********************   desktop   view****************** */
 
+/* Desktop View - Only applies for screen widths of 1024px or more */
+@media screen and (min-width: 1024px) {
 
-
-/* ************************************** */
-
-            /* tablet view  */ 
-
-/* ************************************** */
-
-/* Tablet View (min-width: 768px) */
-@media (min-width: 768px) {
   /* Header Section */
   .header-container {
-      display: flex;
-      flex-direction: column; /* Stack logo-content vertically */
-      align-items: center; /* Center align all content horizontally */
-      justify-content: center; /* Center the logo and title */
-      padding: 0.5rem; /* Reduced padding */
-      background-color: rgba(0, 0, 0, 1); /* Black background */
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically by default */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 1rem 2rem; /* Adjust padding for desktop */
+    background-color: rgba(0, 0, 0, 1); /* Black background */
+    width: 100%;
+    margin-bottom: -30px;
+    height: 50px;
+
   }
 
-  /* Logo and Title Section */
-  .logo-container {
-      display: flex;
-      flex-direction: row; /* Display logo and title inline */
-      align-items: center; /* Center vertically */
-      justify-content: center; /* Center horizontally */
-      gap: 0.8rem; /* Reduced space between logo and title */
-      margin-bottom: 0.5rem; /* Reduced margin below logo */
-  }
-
-  .logo-img {
-      max-width: 100px; /* Reduced max width of the logo for tablet */
-      height: auto;
-  }
-
-  .header-title {
-      font-size: 1.7rem; /* Smaller font size for tablet */
-      font-weight: bold;
-      color: #ffffff;
-      font-family: 'Lato', sans-serif;
-  }
-
-  /* Navigation Section */
+  /* Navigation Container */
   .nav-container {
-      display: flex; /* Display navigation links in a row */
-      flex-direction: row; /* Align items horizontally */
-      justify-content: center; /* Center the navigation items */
-      gap: 1.5rem; /* Reduced space between the navigation links */
-      width: 100%; /* Full width for links */
-      margin-top: 0.5rem; /* Reduced margin on top */
+    display: flex;
+    flex-direction: row; /* Keep navigation items in a row */
+    justify-content: flex-end; /* Align nav items to the right */
+    gap: 20px; /* Space between links */
+    font-size: 10px; /* Adjust font size for desktop */
+    width: 100%; /* Make sure nav container spans the full width */
+   
+
   }
 
+  /* Navigation Links */
   .nav-link {
-      color: whitesmoke;
-      text-decoration: none;
-      font-family: 'Lato', sans-serif;
-      font-size: 1.5rem; /* Reduced font size for tablet */
-      padding: 0.5rem 0; /* Added padding for clickability */
-      transition: color 0.3s;
+    color: whitesmoke; /* Default font color for nav links */
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7rem; /* Adjusted font size for desktop */
+    font-weight: bold;
+    gap: 20px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 5px;
+    margin-top: -50px;
   }
 
   .nav-link:hover {
-      color: #374151;
+    color: #f39c12; /* Hover effect color */
   }
 
-  /* Main Content Section */
+  /* Logo Container */
+  .logo-container {
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+    align-items: center;
+    width: auto; /* Ensure the width of the logo container is automatically adjusted */
+    margin-top: 2.5rem; /* Space above the logo */
+    margin-left: -500px;
+   
+
+   
+  }
+
+  .logo-img {
+    max-width: 60%; /* Ensure logo scales correctly */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: -1px;
+   
+  }
+
+  /* Main Content Styling */
   .main-content {
-      position: relative;
-      text-align: center;
-      height: 50vh; /* Reduced height for better visibility on tablet */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full screen height */
+    text-align: center; /* Center text */
+    position: relative;
+    
   }
 
+  /* Background Image */
   .bg-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      filter: brightness(50%);
+    width: 100%;
+    height: 90%; /* Full height for background image */
+    object-fit: cover; /* Ensure the image covers the whole screen without stretching */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Place the background image behind content */
+    filter: brightness(40%); /* Darken the image */
+    background-position: center; /* Center the background image */
+    margin-bottom: 20px;
+  
   }
 
+  /* Content Overlay */
   .content-overlay {
-      position: relative;
-      z-index: 1;
-      color: white;
-      padding: 1.5rem; /* Reduced padding */
-      text-align: center;
-      border-radius: 8px;
-      max-width: 75%; /* Reduced max width for tablet */
-      margin: 0 auto;
+    position: absolute; /* Make it absolute to position it relative to the parent */
+    top: 35%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% to ensure true centering */
+    z-index: 1; /* Make sure it stays on top of the background */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 700px; /* Limits width on larger screens */
+    width: 100%; /* Ensure it takes up full width */
+    margin: 0 auto; /* Centers the overlay */
   }
 
+  /* Main Heading */
   .main-heading {
-      font-size: 2.5rem; /* Adjusted font size for tablet */
-      font-weight: bold;
-      margin-bottom: 0.9rem; /* Reduced margin */
-      font-family: 'Lato', sans-serif;
+    font-size: 4rem; /* Larger font size for desktop */
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1rem;
   }
 
+  /* Main Paragraph */
   .main-paragraph {
-      font-size:2.1rem; /* Adjusted font size for tablet */
-      margin-bottom: 2.8rem; /* Reduced bottom margin */
+    font-size: 1.1rem; /* Slightly larger font size for desktop */
+    margin-bottom: -5rem; /* Space below paragraph */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5;
   }
 
+  /* Explore Button Styling */
   .explore-button {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 0.6rem 1.2rem; /* Reduced padding for button */
-      text-decoration: none;
-      font-size: 2rem; /* Slightly reduced font size */
-      border: 2px solid #ccc;
-      transition: background-color 0.3s;
-      font-family: 'Karla', sans-serif;
-      display: inline-block;
-      margin-top: 1rem;
-
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s;
+    font-family: 'Karla', sans-serif;
+    display: inline-block;
+    gap: 40px; /* You can keep this if you want to add space inside the button, but it's typically used for flex containers. */
+    
+    /* Move the button below the paragraph */
+    margin-top: 7rem; /* Positive margin will push the button down */
+  }
+  
+  .explore-button:hover {
+    background-color: goldenrod;
+  }
+  
   }
 
   .explore-button:hover {
-      background-color: goldenrod;
+    background-color: goldenrod;
   }
+
+
+
+
+  /* Main container holding everything */
+.container {
+  width: 100%; /* Make sure container spans full width */
+  text-align: center; /* Center text, if needed */
+}
+
+/* Flex container for side-by-side layout */
+.flex-container {
+  display: flex; /* Display the two child containers side by side */
+  gap: 5px; /* Adds 5px gap between the left and right containers */
+  justify-content: space-between; /* Optional: Adds space between the containers */
+  align-items: flex-start; /* Align the items at the top */
+}
+
+/* Left Container: Full-width Image */
+.full-width-image-container {
+  flex: 3; /* Left container will take 3 parts of the available space */
+}
+
+.full-width-image-container img {
+  width: 100%; /* Make the image fill the full width of the left container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Right Container: 4 Image Boxes arranged in a 2x2 grid */
+.image-grid-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 50px); /* 2 columns, each 50px wide */
+  grid-template-rows: repeat(2, 50px); /* 2 rows, each 50px tall */
+  gap: 5px; /* Adds a 5px gap between images */
+  flex: 1; /* Right container takes up remaining space */
+}
+
+/* Each individual image inside the right container */
+.image-box img {
+  width: 50px; /* Set the width of the images */
+  height: 50px; /* Set the height of the images */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Main Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #663300;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #996633;
+}
+
+/* Flex Container to arrange left and right containers side by side */
+.flex-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Left Container: Full-Width Image */
+.full-width-image-container {
+  flex: 1;
+}
+
+.full-width-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Right Container: 2x2 Image Grid */
+.image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50px); /* 2 columns, each 50px wide */
+  grid-gap: 10px; /* 10px gap between images horizontally and vertically */
+  grid-template-rows: auto auto; /* Two rows for the images */
+  margin-top: 10px; /* Optional: margin between the two rows */
+}
+
+/* Image inside grid container */
+.image-grid-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
 }
