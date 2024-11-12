@@ -1,867 +1,4 @@
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@700&display=swap');
-
-/* General Reset for consistency */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif; /* Change to preferred font */
-  background-color: #f4f4f4;
-  color: #fff;
-}
-
-/* Header Section */
-.header-container {
-  display: flex;
-  flex-direction: column; /* Stack logo and nav vertically */
-  align-items: center; /* Center content horizontally */
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 1); /* Black background */
-  width: 100%;
-  margin-top: 0; /* Ensure there's no negative margin */
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center; /* Center the logo */
-  align-items: center;
-  margin-bottom: 2rem; /* Space between logo and nav */
-}
-
-.logo-img {
-  max-width: 70%; /* Make logo responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Navigation Container */
-.nav-container {
-  display: flex;
-  flex-direction: row; /* Horizontal layout */
-  justify-content: center; /* Center the nav items horizontally */
-  gap: 1.5rem; /* Adjust the spacing between links */
-  font-size: 0.75rem; /* Reduce font size of container */
-}
-
-/* Navigation Links */
-.nav-link {
-  color: whitesmoke;
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875rem; /* Smaller font size for individual links */
-  font-weight: bold;
-  transition: color 0.3s;
-  margin-bottom: 10px;
-}
-
-
-.nav-link:hover {
-  color: #f39c12; /* Hover effect color */
-}
-
-/* Main Content Styling */
-.main-content {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full screen height */
-  text-align: center; /* Center text */
-  position: relative;
-}
-
-.bg-image {
-  width: 100%;
-  height: 63%; /* Full height for background image */
-  object-fit: cover; /* Ensure the image covers the whole screen without stretching */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; /* Place the background image behind content */
-  filter: brightness(40%); /* Darken the image */
-  background-position: center; /* Center the background image */
-  
-}
-
-.content-overlay {
-  position: absolute; /* Make it absolute to position it relative to the parent */
-  top: 35%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Offset by 50% to ensure true centering */
-  z-index: 1; /* Make sure it stays on top of the background */
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 8px;
-  max-width: 700px; /* Limits width on larger screens */
-  width: 100%; /* Ensure it takes up full width */
-  margin: 0 auto; /* Centers the overlay */
-}
-
-
-.main-heading {
-  font-size: 1.5rem; /* Adjusted size */
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  margin-bottom: 1rem;
- 
-}
-
-.main-paragraph {
-  font-size: 1rem; /* Default font size */
-  margin-bottom: 3rem; /* Space below paragraph */
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.explore-button {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  transition: background-color 0.3s;
-  font-family: 'Karla', sans-serif;
-  display: inline-block;
-  margin-top: -2rem;
-}
-
-.explore-button:hover {
-  background-color: goldenrod;
-}
-
-
-/* General Container */
-.container {
-  padding: 10px;
-  max-width: 150%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-  justify-content: center; /* Center the content vertically */
-  background-color: #f2f0e9;
-  
-}
-
-/* Main Heading (h1) */
-h1.section-title {
-  font-size: 1rem; 
-  color: #d79e3d; /* Gold color */
-  margin-bottom: 10px; /* Space below the title */
-  margin-left: -30%;
-  font-weight: lighter;
-  font-size: normal;
-  margin-top: -40%;
-
-}
-
-.section-subtitle {
-  font-size: 1.7rem; /* 28.83px */
-  color: black; /* Black text color */
-  font-weight: bold; /* Make the text bold */
-  margin-bottom: 20px; /* Space below the subtitle */
-  margin-left: 1%; /* Adjust the left margin */
-  font-weight: 550;
-}
-
-
-
-
-
-/* First Container: Full-width Image */
-.full-width-image-container {
-  width: 380px;
-  height: 400px; /* Height of the first image container */
-  overflow: hidden;
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  margin-bottom: 1;
-}
-
-.full-width-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fully covers the container */
-  border-radius: 15px; /* Adds rounded corners to the full-width image */
-  
-}
-
-/* Second Container: 4 Image Boxes */
-.image-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two images per row */
-  gap: 5px; /* 5px gap between images */
-  margin-top: 20px; /* Optional: Adds some space between the first and second container */
-  justify-items: center; /* Center the images within each grid item */
-}
-
-/* Image Box */
-.image-box {
-  width: 200px;  /* Size of the image boxes */
-  height: 200px; /* Size of the image boxes */
-  overflow: hidden; /* Ensures images don't overflow out of the box */
-  display: flex;
-  justify-content: center; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
-  margin-bottom: 30px;
-}
-
-.image-box img {
-  width: 95%;
-  height: 100%;
-  object-fit: cover; /* Ensures images fill the container without distortion */
-  border-radius: 15px; /* Adds rounded corners to all images in the image box */
-  margin-bottom: 10%;
-
-}
-
-  
-  /* General Background for the Section */
-  .visit-us-section {
-    
-    padding: 1.5rem; /* Padding of 1.5rem */
-    margin-left: -25%;
-    
-  }
-  
-  /* Section Title (WHAT WE OFFER) */
-  .offer-title {
-    font-size: 0.9rem; /* Equivalent to 2rem in Tailwind */
-  
-    color: #cc953a; /* Primary text color */
-    margin-bottom:1rem; /* Bottom margin of 1rem */
-    margin-left: 45%;
-    font-weight: lighter;
-   
-  }
-  
-  /* Why Visit Us Subtitle */
-.visit-us-subtitle {
-  font-size: 1.5rem; /* Subtitle size */
-  font-weight: 800; /* Bold font weight */
-  color: black; /* Primary text color */
-  margin-bottom: 3rem; /* Larger bottom margin */
-  text-align: center; /* Centered subtitle */
-  margin-right: -20%; /* Slightly negative margin to shift subtitle */
-  font-weight: bolder; /* Ensure bold text */
-  
-}
-
-/* Grid Layout */
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 column by default (mobile-first approach) */
-  gap: 1.5rem; /* Gap between grid items */
-  margin-left: 10%; /* Margin on the left */
-}
-
-/* Card Styling */
-.feature-card {
-  text-align: center; /* Center content inside card */
-  transition: transform 0.3s ease-in-out;
-  margin-left: 10%; /* Margin on the left of the card */
-}
-
-.feature-card:hover {
-  transform: translateY(-10px); /* Hover effect: lift card */
-}
-
-/* Image Styling */
-.feature-icon {
-  margin-left: auto; /* Center image horizontally */
-  margin-right: auto; /* Center image horizontally */
-  margin-bottom: 0.5rem; /* Margin below image */
-  width: 60px; /* Set image size */
-  height: 60px; /* Set image size */
-}
-
-/* Heading Styling */
-.feature-heading {
-  font-size: 1.125rem; /* Font size for headings */
-  font-weight: 600; /* Semi-bold font weight */
-  color: #333; /* Primary text color */
-  margin-bottom: 1rem; /* Margin below heading */
-}
-
-/* Text Muted (for paragraph text) */
-.feature-description {
-  color: #666; /* Lighter text color for description */
-  font-size: 0.9rem; /* Regular text size */
-  line-height: 1.5; /* Improved readability */
-}
-
-/* Grid Layout: Stacking Items on Smaller Screens */
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Stack items in a single column on all screen sizes */
-  gap: 1.5rem; /* Space between grid items */
-  margin-left: 10%; /* Left margin */
-}
-
- /* Menu Card Styling */
-.menu-card {
-  position: relative;
-  background-color: #d79e3d;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  width: 105%; /* Adjusted to 100% width to fill container */
- 
-}
-
-/* Menu Background Styling */
-.menu-background {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  filter: brightness(0.4); /* Reduces brightness to create a darker effect */
- 
-}
-
-/* Menu Content Styling */
-.menu-content {
-  position: relative;
-  z-index: 10;
-  margin-bottom: 20px;
-}
-
-/* Menu Title and Location Title Styling */
-.menu-title, .location-title {
-  font-size: 0.9rem;
-  color: #d69d3d;
-  margin-bottom: 0.5rem;
-  filter: brightness(0.9);
-  font-weight: normal;
-  font-size: normal;
-}
-
-/* Menu Subtitle and Location Subtitle Styling */
-.menu-subtitle, .location-subtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* Menu Button Styling */
-.menu-btn {
-  background-color: white;
-  color: black;
-  font-size: 0.7rem; /* Smaller font size */
-  padding: 0.5rem 0.8rem; /* Reduced padding */
-  margin-top: 1rem;
-  transition: background-color 0.3s;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 50px;
-  font-weight: 600;
-  
-}
-
-
-.menu-btn:hover {
-  background-color: #d69d3d;
-}
-
-/* Location Title Margin Fix */
-.location-title {
-  margin-bottom: 10px; /* Fix typo in original margin */
-}
-
-/* Location Button Styling */
-.location-btn {
-  background-color: #120b05;
-  color: white;
-  border: 2px solid white; /* White border with defined width */
-  padding: 0.4rem 1rem;
-  margin-top: 1rem;
-  transition: background-color 0.3s;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.location-btn:hover {
-  background-color: #d79e3d;
-}
-
-
- /* General Styles for About Section */
-.about-section {
-  padding-top: 50px; /* Creates 50px padding at the top */
-  margin-top: 70px; /* Margin on top */
-  text-align: center; /* Center the content by default */
-  font-family: 'Karla', sans-serif; /* Applying the Karla font to the whole section */
-}
-
-/* About Image Styling */
-.about-image img {
-  width: 100%; /* Full width of the container */
-  height: 40%; /* Reduced height of the image */
-  object-fit: cover; /* Ensures image covers the div without distortion */
-  margin-top: 10%; /* Gap from the top */
-  display: block; /* Ensures the image is displayed as a block element */
-  margin-left: 0; /* Align image to the left edge */
-  margin-right: 0; /* Align image to the right edge */
-}
-
-/* About Content Styling */
-.about-content {
-  max-width: 700px; /* Limits content width */
-  margin: 0 auto; /* Centers the content */
-  text-align: left; /* Align text to the left */
-  margin-top: 20px; /* Space between image and content */
- 
-}
-
-/* About Title Styling */
-.about-title {
-  font-size: 0.9rem; /* Adjusted font size */
-  color: #dcad5d; /* Title color */
-  filter: brightness(80%); /* Reduces brightness */
-  margin-top: 30px; /* Gap above the title */
-  margin-bottom: 5px; /* Small gap below the title */
-  font-weight: 400; /* Light font weight */
-  margin-top: -164%;
-  margin-left: -20px;
-}
-
-/* About Subtitle Styling */
-.about-subtitle {
-  font-size: 1.4rem; /* Larger font size */
-  font-weight: 600; /* Bold font weight */
-  color: black; /* Text color */
-  margin-bottom: 1.5rem; /* Space below the subtitle */
-  margin-left: -17px;
-}
-
-/* About Text Styling */
-.about-text {
-  font-size: 1rem; /* Standard font size for paragraph */
-  color: #555; /* Dark grey color for text */
-  line-height: 1.6; /* Improved readability */
-  margin-bottom: 2rem; /* Space between paragraphs */
-  margin-left: -18px;
-  margin-top: -20px;
-}
-
-/* Learn More Button Styling */
-.learn-more-btn {
-  display: inline-block;
-  background-color: #120b05; /* Dark background for the button */
-  color: white; /* Button text color */
-  padding: 0.75rem 1.5rem; /* Padding for the button */
-  font-size: 1rem; /* Font size of the button */
-  font-weight: bold; /* Bold text in the button */
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-top: -18px; /* Space above the button */
-  margin-left: -16px;
-}
-
-.learn-more-btn:hover {
-  background-color: #8b5d3e; /* Lighter color on hover */
-}
-
-/* Optional Margin Adjustments for Small Screens */
-.about-section {
-  padding: 2rem 1rem; /* Adjust padding for small screens */
-  margin-bottom: -60px; /* Optional margin adjustment for small screens */
-}
-
-.about-image {
-  width: 113%; /* Full width */
-  height: 790px; /* Reduced height */
-  overflow: hidden; /* Ensures the image fits */
-  margin-left: 0; /* Remove left margin */
-  margin-bottom: 9rem; /* Space between image and content */
-  margin-left: -20px;
-  margin-top: -25%;
-}
-
-/* About Text */
-.about-text {
-  font-size: 0.59rem; /* Default font size */
-  font-family: 'Karla', sans-serif; /* Using Karla font */
-  font-weight: bold; /* Bold text */
-  filter: brightness(40%); /* Reduces brightness */
-  color: rgba(0, 0, 0, 0.7); /* Black text with 70% opacity */
-
-}
-
-/* General Testimonials Container */
-.testimonial-container {
-  padding: 2rem 1rem;
-  background-color: #000000; /* Black background for the container */
-  color: white; /* White text */
-  text-align: left; /* Align the text to the left */
-  width: 100%; /* Ensure the container takes full width */
-  box-sizing: border-box; /* Include padding in the element's total width/height */
-  margin-top: 100px;
-}
-
-/* Testimonial Heading Style */
-.testimonial-heading {
-  color: #d79e3d; /* Gold color for the heading */
-  font-size: 1.5rem; /* Adjusted font size */
-  font-weight: normal;
-  opacity: 0.7; /* Reduced brightness */
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-/* Testimonial Subheading Style */
-.testimonial-subheading {
-  color: white; /* White color for the subheading */
-  font-size: 1.25rem;
-  font-weight: bold; /* Bold font */
-  margin-bottom: 20px; /* Space below the subheading */
-}
-
-/* Testimonial Grid Layout */
-.testimonial-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout with multiple columns */
-  gap: 10px; /* 5px gap between items */
-}
-
-/* Testimonial Item Styling */
-.testimonial-item {
-  position: relative; /* For positioning the blockquote text */
-}
-
-/* Testimonial Image Container */
-.testimonial-image-container {
-  position: relative; /* Needed to position the text over the image */
-  overflow: hidden; /* Ensures text doesn't overflow the image container */
-}
-
-/* Testimonial Image Styling */
-.testimonial-image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonial-image {
-  width: 100%; /* Full width of the container */
-  height: 400px; /* Adjusted height for better proportion */
-  object-fit: cover; /* Ensures the image covers the container without distortion */
-  object-position: center; /* Keeps the center of the image in focus */
-}
-
-/* Dark overlay */
-.testimonial-image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark black overlay with 50% opacity */
-  z-index: 1; /* Ensure overlay is above the image */
-}
-
-
-/* Blockquote Text Styling (Positioned Over the Image) */
-.customer-details {
-  color: white; /* White text for the customer quote */
-  font-size: 1rem; /* Adjust font size */
-  font-weight: 600; /* Semi-bold text */
-  position: absolute; /* Position it on top of the image */
-  bottom: 40px; /* Adjust the distance from the bottom */
-  left: 20px; /* Position it from the left */
-  max-width: 80%; /* Prevent the text from going outside the image */
-  z-index: 2; /* Ensure it stays above the image */
-  margin-top: 20px; /* Adjust margin top to control the space between the quote and the image */
-}
-
-/* Customer Name Styling (Positioned Below the Testimonial Quote) */
-.testimonial-quote {
-  color: #cc953a; /* Gold color for the customer name */
-  font-size: 1rem;
-  position: absolute;
-  bottom: 10px; /* Adjust positioning */
-  left: 20px; /* Position it from the left */
-  font-weight: normal;
-  max-width: 80%;
-  z-index: 2; /* Ensure the text stays above the image */
-  margin-bottom: 10px;
-}
-
-/* Optional Media Query for smaller devices */
-@media (max-width: 768px) {
-  .testimonial-heading {
-      font-size: 1.25rem;
-  }
-
-  .testimonial-subheading {
-      font-size: 1rem;
-  }
-
-  .testimonial-image {
-      height: 350px; /* Slightly smaller height for smaller screens */
-      width: 97%;
-  }
-
-  .customer-details {
-      font-size: 0.6rem; /* Slightly smaller font size for quote */
-      bottom: 70px;
-      margin-top: 10px; /* Adjust the margin top on smaller screens */
-  }
-
-  .testimonial-quote {
-      font-size: 0.6rem; /* Slightly smaller font size for customer name */
-      
-      margin: 40px;
-      margin-left: -1px;
-  }
-}
-
-
-/* General Footer Styling */
-/* General Footer Styling */
-.footer {
-  text-align: center;
-  background-color: #000000; /* Black background for the footer */
-  padding: 2rem 1rem; /* Padding above and below the footer */
-  color: white; /* White text color */
-  width: 100%; /* Ensure it takes full width */
-  box-sizing: border-box; /* Include padding and borders in the element's total width/height */
-  position: relative; /* Required for absolute positioning of the pseudo-element */
-}
-
-/* Footer Text Styling */
-.footer-text {
-  font-size: 0.5rem; /* Adjusted font size */
-  font-weight: normal;
-  margin-bottom: 0; /* Remove default margin to control spacing manually */
-  padding-top: 10px; /* Space for the line above the text */
-  position: relative; /* Necessary for the position of the pseudo-element */
-}
-
-/* Create a full-width underline above the text */
-.footer-text::before {
-  content: ""; /* Empty content to create the line */
-  position: absolute;
-  top: -5px; /* Position the line 5px above the text */
-  left: 0;
-  width: 100%; /* Full width of the footer */
-  border-top: 2px solid white; /* White color for the line */
-}
-
-/* *********************   desktop   view****************** */
-
-/* Desktop View - Only applies for screen widths of 1024px or more */
-@media screen and (min-width: 1024px) {
-
-  /* Header Section */
-  .header-container {
-    display: flex;
-    flex-direction: column; /* Stack logo and nav vertically by default */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    padding: 1rem 2rem; /* Adjust padding for desktop */
-    background-color: rgba(0, 0, 0, 1); /* Black background */
-    width: 100%;
-    margin-bottom: -30px;
-    height: 50px;
-
-  }
-
-  /* Navigation Container */
-  .nav-container {
-    display: flex;
-    flex-direction: row; /* Keep navigation items in a row */
-    justify-content: flex-end; /* Align nav items to the right */
-    gap: 20px; /* Space between links */
-    font-size: 10px; /* Adjust font size for desktop */
-    width: 100%; /* Make sure nav container spans the full width */
-   
-
-  }
-
-  /* Navigation Links */
-  .nav-link {
-    color: whitesmoke; /* Default font color for nav links */
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.7rem; /* Adjusted font size for desktop */
-    font-weight: bold;
-    gap: 20px;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-    margin-bottom: 5px;
-    margin-top: -50px;
-  }
-
-  .nav-link:hover {
-    color: #f39c12; /* Hover effect color */
-  }
-
-  /* Logo Container */
-  .logo-container {
-    display: flex;
-    justify-content: flex-start; /* Align logo to the left */
-    align-items: center;
-    width: auto; /* Ensure the width of the logo container is automatically adjusted */
-    margin-top: 2.5rem; /* Space above the logo */
-    margin-left: -500px;
-   
-
-   
-  }
-
-  .logo-img {
-    max-width: 60%; /* Ensure logo scales correctly */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: -1px;
-   
-  }
-
-  /* Main Content Styling */
-  .main-content {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full screen height */
-    text-align: center; /* Center text */
-    position: relative;
-    
-  }
-
-  /* Background Image */
-  .bg-image {
-    width: 100%;
-    height: 90%; /* Full height for background image */
-    object-fit: cover; /* Ensure the image covers the whole screen without stretching */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2; /* Place the background image behind content */
-    filter: brightness(40%); /* Darken the image */
-    background-position: center; /* Center the background image */
-    margin-bottom: 20px;
-  
-  }
-
-  /* Content Overlay */
-  .content-overlay {
-    position: absolute; /* Make it absolute to position it relative to the parent */
-    top: 35%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset by 50% to ensure true centering */
-    z-index: 1; /* Make sure it stays on top of the background */
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 8px;
-    max-width: 700px; /* Limits width on larger screens */
-    width: 100%; /* Ensure it takes up full width */
-    margin: 0 auto; /* Centers the overlay */
-  }
-
-  /* Main Heading */
-  .main-heading {
-    font-size: 4rem; /* Larger font size for desktop */
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 1rem;
-  }
-
-  /* Main Paragraph */
-  .main-paragraph {
-    font-size: 1.1rem; /* Slightly larger font size for desktop */
-    margin-bottom: -5rem; /* Space below paragraph */
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5;
-  }
-
-  /* Explore Button Styling */
-  .explore-button {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-size: 1rem;
-    border: 2px solid #ccc;
-    transition: background-color 0.3s;
-    font-family: 'Karla', sans-serif;
-    display: inline-block;
-    gap: 40px; /* You can keep this if you want to add space inside the button, but it's typically used for flex containers. */
-    
-    /* Move the button below the paragraph */
-    margin-top: 7rem; /* Positive margin will push the button down */
-  }
-  
-  .explore-button:hover {
-    background-color: goldenrod;
-  }
-  
-  }
-
-  .explore-button:hover {
-    background-color: goldenrod;
-  }
-
-
-
-
-  /* Main container holding everything */
-.container {
-  width: 100%; /* Make sure container spans full width */
-  text-align: center; /* Center text, if needed */
-}
-
-/* Flex container for side-by-side layout */
-.flex-container {
-  display: flex; /* Display the two child containers side by side */
-  gap: 5px; /* Adds 5px gap between the left and right containers */
-  justify-content: space-between; /* Optional: Adds space between the containers */
-  align-items: flex-start; /* Align the items at the top */
-}
-
-/* Left Container: Full-width Image */
-.full-width-image-container {
-  flex: 3; /* Left container will take 3 parts of the available space */
-}
-
-.full-width-image-container img {
-  width: 100%; /* Make the image fill the full width of the left container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the entire container */
-}
-
-/* Right Container: 4 Image Boxes arranged in a 2x2 grid */
-.image-grid-container {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 50px); /* 2 columns, each 50px wide */
-  grid-template-rows: repeat(2, 50px); /* 2 rows, each 50px tall */
-  gap: 5px; /* Adds a 5px gap between images */
-  flex: 1; /* Right container takes up remaining space */
-}
-
-/* Each individual image inside the right container */
-.image-box img {
-  width: 50px; /* Set the width of the images */
-  height: 50px; /* Set the height of the images */
-  object-fit: cover; /* Maintain aspect ratio while covering the container */
-}
-
-/* Basic Reset */
+/* Reset some basic styling */
 * {
   margin: 0;
   padding: 0;
@@ -870,63 +7,647 @@ h1.section-title {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
 }
 
-/* Main Container Styling */
-.container {
-  max-width: 1200px;
-  margin: 20px auto;
+/* Header styling */
+.header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo and title for mobile view */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+/* Navigation styling */
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+/* Hero section styling */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 80vh;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Above the image */
+  max-width: 600px;
+  margin-top: -20px;
+  padding-top: 10px; /* Add a 10px gap between the title and the content */
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Adds a 10px gap between the title and the content */
+}
+
+.hero-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 40px;
+}
+
+.hero-button:hover {
+  background-color: #daa751; /* Change hover color to #daa751 */
+}
+
+
+/* Welcome section styling */
+.welcome-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.welcome-title {
+  color: #d59e3d;
+  font-size: 1rem;
+  margin-bottom: 10px;
+ 
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+  
+}
+
+/* Image container for layout adjustments */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Full-width image styling for mobile */
+.full-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Container for small images with gap */
+.small-images {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr; /* Two images per row */
+  width: 100%; /* Stretches images to full width on mobile */
+}
+
+.small-image {
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+/* Section styling */
+.offer-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.offer-title {
+  color: #d59e3d;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.offer-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: black;
+}
+
+/* Section styling */
+.offer-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.offer-title {
+  color: #d59e3d;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.offer-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: black;
+}
+
+/* Offer item styling for mobile */
+.offer-item {
+  margin-bottom: 40px;
+}
+
+.offer-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.offer-subheading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin: 15px 0 10px;
+}
+
+.offer-description {
+  font-size: 1rem;
+  color: #333;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ********** General Styles for Mobile ******** */
+.menu-locations-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* Take full viewport height for mobile */
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  z-index: -1; /* Ensure image stays in the background */
+}
+
+/* Style for the menu-section and locations-section */
+.menu-section, .locations-section {
+  position: relative;
+  z-index: 1;  /* Make sure the text appears above the background image */
+  width: 100%;  /* Take full width */
+  padding: 20px;
+  box-sizing: border-box; /* Prevent padding from affecting width */
+  color: white;  /* Set text color to white */
+  margin-bottom: 20px; /* Add space between the sections */
+}
+
+/* Title Styling */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Heading Styling */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+/* Button Styles for "EXPLORE OUR MENU" */
+.explore-menu-btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+/* Button Styles for "VIEW LOCATIONS" */
+.view-locations-btn {
+  background-color: #120b04;
+  color: white;
+  font-weight: bold;
+}
+
+
+/***************** About section  ****************** */
+.about-background-container {
+  display: block;
+  overflow: hidden;
+}
+
+.about-background-image {
+  width: 100%;  /* Full width on mobile */
+  height: auto;
+}
+
+.about-content-section {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.about-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #daa751;
+}
+
+.about-section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.about-story-text {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.learn-more-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Base Styles for Testimonials Section (Mobile Layout - Default) */
+/* Base Styles for Mobile Layout (Mobile-First Approach) */
+#testimonials {
+  background-color: black;
+  color: #d59e3d;
+  margin-top: 100px;
+}
+
+
+
+.testimonial-container {
+  display: block; /* Stack items vertically on mobile */
+  gap: 5px; /* 5px gap between each item */
+}
+
+.testimonial-item {
+  width: 100%; /* Full width for mobile */
+  margin-bottom: 20px; /* 5px gap after each image */
+  position: relative; /* Ensure content can be positioned within the image */
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 450px; /* Increased height for the image on mobile */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 0;
+}
+
+/* Overlay content on the image */
+.testimonial-content {
+  position: absolute;
+  bottom: 10px; /* Position at the bottom of the image */
+  left: 10px; /* Align to the left side of the image */
+  right: 10px;
+  text-align: left; /* Align text to the left */
+  color: white;
+  border-radius: 5px;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.testimonial-hello {
+  color: #cf983b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px; /* Adjust margin for mobile */
+}
+
+.footer {
+  text-align: center; /* Center the footer text */
   padding: 20px;
 }
 
-/* Section Title */
-.section-title {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #663300;
+.footer-text {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none; /* Underline the text */
+  padding-bottom: 10px; /* Add space between text and underline */
 }
 
-.section-subtitle {
-  font-size: 1.2em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #996633;
-}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    text-align: left;
+  }
 
-/* Flex Container to arrange left and right containers side by side */
-.flex-container {
+  .logo-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+
+  .nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+
+  .welcome-section {
+    margin: 0 13%; /* 20% margin on both sides */
+    text-align: left;
+  }
+  
+  .image-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .full-image {
+    width: 50%; /* Left container with full image */
+    height: 545px;
+  }
+
+  .small-images {
+    width: 50%; /* Right container with small images */
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr; /* Two images per row */
+  }
+
+  .small-image {
+    width: 100%;
+    height: 270px; /* Same height for consistent appearance */
+  }
+  
+  /* Container styling */
+  .offer-section {
+    padding: 60px 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Section titles for desktop */
+  .offer-title, .offer-heading {
+    text-align: center;
+  }
+  
+
+  /* Flex container for offer items in desktop view */
+  .offer-items-row {
+    display: flex; /* Flexbox to arrange items horizontally */
+    justify-content: center; /* Center align items horizontally */
+    gap: 10px; /* 10px gap between each item */
+    flex-wrap: nowrap; /* Ensure no wrapping of items */
+  }
+
+  /* Styling for individual offer items */
+  .offer-item {
+    flex: 0 0 auto; /* Items should not stretch but maintain their size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem; /* Remove bottom margin to avoid extra space */
+  }
+
+  .offer-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  .offer-subheading {
+    font-size: 1.75rem;
+    margin: 20px 0 15px;
+  }
+
+  .offer-description {
+    font-size: 1.1rem;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  /* ********** General Styles for Desktop ******** */
+.background-container {
   display: flex;
-  gap: 20px;
+  flex-direction: row; /* Arrange sections horizontally */
+  justify-content: space-between;
+  
+  position: relative;
+  height: 80vh; /* Set the height of the background image (adjust to your preference) */
 }
 
-/* Left Container: Full-Width Image */
-.full-width-image-container {
-  flex: 1;
-}
-
-.full-width-image-container img {
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 60%; /* Reduced height of the background image */
+  object-fit: cover; /* Ensure the image covers the background without distortion */
+  z-index: -1; /* Keeps the image behind the text */
+}
+
+.menu-section, .locations-section {
+  width: 48%; /* Each section takes up 48% of the container */
+  position: relative;
+  top: 0; /* Ensure the sections are aligned properly */
+  transform: translateY(0); /* Remove vertical centering for desktop */
+  height: auto; /* Adjusted height for flexibility */
+  margin-top: -15%;
+  min-width: 100px;
+}
+/* about section */
+.about-background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the entire content */
+  margin-top: -10%; /* Move the content up */
+  margin-left: 70px;
+}
+
+.about-background-image {
+  width: 35%; /* Reduced image width */
   height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+  margin-right: 20px; /* Space between image and content */
+  margin-left: 70px; /* Left margin for image */
+  margin-top: -10%;
+
 }
 
-/* Right Container: 2x2 Image Grid */
-.image-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 50px); /* 2 columns, each 50px wide */
-  grid-gap: 10px; /* 10px gap between images horizontally and vertically */
-  grid-template-rows: auto auto; /* Two rows for the images */
-  margin-top: 10px; /* Optional: margin between the two rows */
+.about-content-section {
+  width: 55%; /* Reduced content width */
+  padding: 15px; /* Reduced padding */
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  margin-top: 40px; /* Further adjust vertical alignment */
 }
 
-/* Image inside grid container */
-.image-grid-container img {
-  width: 50px;
-  height: 50px;
+.about-section-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.about-section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.about-story-text {
+  font-size: 0.6rem;
+  color: black;
+  margin-bottom: 16px;
+  text-align: left;
+  max-width: 49%;
+
+}
+
+.learn-more-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* testimonial sections  */
+#testimonials {
+  padding: 40px 10%;
+}
+
+.testimonial-container {
+  display: flex; /* Items in a row on desktop */
+  gap: 15px; /* 15px gap between items on desktop */
+}
+
+.testimonial-item {
+  width: 28%; /* Each item takes up 28% of the container width */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 350px;
   object-fit: cover;
   border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Overlay content on the image */
+.testimonial-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+.testimonial-hello {
+  color: #cf983b;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: -30px; /* Space between testimonial text and author name */
+}
+
+.footer-text {
+  font-size: 1.2rem; /* Increase font size for desktop */
+  padding-bottom: 15px; /* More space for the underline */
+}
+
 }
