@@ -142,17 +142,17 @@ nav ul li a {
 }
 
 .explore-btn {
-  font-family: 'Karla', sans-serif; /* Apply Karla font to button */
+  font-family: 'Karla', sans-serif; 
   background-color: white;
   margin-top: 10%;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 0px;
   padding: 1rem 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.5s; /* Delay for button to appear after h1 animation */
+  animation-delay: 1.5s; 
 }
 
 .explore-btn:hover {
@@ -718,7 +718,10 @@ footer p:nth-child(2) {
   }
 }
 
-/* Tablet View */
+/*******************************************
+               Tablet View             
+ ******************************************/
+ 
 @media (min-width: 768px) and (max-width: 1099px) {
   header .logo-container {
     margin-bottom: 20px;
@@ -1298,7 +1301,7 @@ footer p:nth-child(2) {
     padding: 60px;
     text-align: left;
     background-color: black;
-    max-width: 100%;
+    max-width: 120%;
 
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
